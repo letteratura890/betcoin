@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+html{
+    scrollbar-width: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-main{
+    width: 100%;
+}
+
+.mobile{
+    display: none;
+}
+.wide-view{
+    display: block;
+}
+
+a{
+    font-size: 1.5vh;
+}
+h1{
+    font-size: 5vh;
+}
+h2{
+    font-size: 6.5vh;
+}
+h3{
+    font-size: 2vh;
+    font-weight: 400;
+}
+h4{
+    font-size: 1.8vh;
+}
+p{
+    font-size: 1.8vh;
+}
+li{
+    font-size: 1.7vh;
+}
+
+@media only screen and (/*max-width: 1500px*/ orientation: portrait) {
+    .mobile{
+        display: block;
+    }
+
+    .wide-view{
+        display: none;
+    }
+    a{
+        font-size: 2vh;
+    }
+    h1{
+        font-size: 3.5vh;
+    }
+    h2{
+        font-size: 4.5vh;
+    }
+    h3{
+        font-size: 2vh;
+    }
+    h4{
+        font-size: 1.8vh;
+    }
+    p{
+        font-size: 2vh;
+    }
+    li{
+        font-size: 2vh;
+    }
+
+    header > a{
+        width: 30%;
+        margin-right: 5%;
+    }
+    .navbar{
+        width: 10%;
+    }
+    header .logo{
+        min-width: 5em;
+    }
+    .background-landing .row{
+        display: block;
+    }
+    .background-landing{
+        width: 100%;
+    }
+    .background-landing .logo{
+        display: none;
+    }
+    .background-landing .row-icon-landing{
+        display: block;
+        margin-left: 0;
+    }
+    .background-landing .row-icon-landing .icons{
+        width: 120%;
+        margin-left: -10%;
+        text-align: center;
+    }
+    .background-landing .btn-buy{
+        width: 60%;
+        margin-left: 20%;
+        text-align: center;
+    }
+    .banner-list .first-list{
+        width: 100% !important;
+    }
+    .banner-list .first-list ul{
+        display: block !important;
+    }
+    .banner-list .first-list ul li{
+        width: 70%;
+        margin: 3em 15%;
+    }
+    .banner-list .first-list ul li img{
+        width: 50%;
+    }
+    .row{
+        margin-top: 0 !important;
+    }
+    .cards-container .card{
+        width: 100% !important;
+        height: 30em;
+        min-width: 0em !important;
+    }
+    .background-landing .row{
+        margin-top: 1em;
+    }
+}

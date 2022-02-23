@@ -1,0 +1,71 @@
+.footer{
+    background-color: #24262b;
+    padding: 4em 0;
+}
+.footer-container{
+    width: 100%;
+}
+.footer-row{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col>ul{
+    list-style: none;
+}
+.footer-col{
+    width: 25%;
+    min-width: 10em;
+    margin-top: 3em;
+}
+.footer-col h4{
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.7em;
+    background-color: #ff263a;
+    height: 2px;
+    box-sizing: border-box;
+    width: 3em;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: .8em;
+}
+.footer-col ul li a{
+    text-transform: capitalize;
+    color: #bbbbbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 10px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 .6em .6em 0;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+

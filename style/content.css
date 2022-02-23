@@ -1,0 +1,438 @@
+.content{
+    background-color: #ededed;
+    margin-top: 100vh;
+    width: 100%;
+}
+
+/*
+*
+*   section 1: banners
+*
+*/
+
+.banner-list{
+    width: 100%;
+    background-color: #fff;
+}
+.banner-list .first-list{
+    width: 80%;
+    margin: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.banner-list .first-list ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+.banner-list .first-list li{
+    list-style: none;
+}
+.banner-list .first-list img{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/*
+*
+*   section 2: cards
+*
+*/
+
+.cards-container{
+    padding-top: 3em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 3em;
+}
+ .cards-container .card{
+    position: relative;
+    border-radius: 0.2em;
+    width: 40%;
+    min-width: 45em;
+    max-width: 50em;
+    min-height: 16em;
+    margin: 2em;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 120px;
+}
+.cards-container .card .title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1.8em;
+    padding-top: 1.2em;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+}
+.cards-container .card .title h1{
+    font-size: 2em;
+    font-weight: 300;
+}
+.cards-container .card .imgBx,
+.cards-container .card .contentBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.cards-container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+.cards-container .card .contentBx::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+.cards-container .card:hover .contentBx::before{
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+}
+.cards-container .card:hover .contentBx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards-container .card .contentBx .card-content{
+    position: relative;
+    padding: 4em 3em 4em 3em;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-100%);
+    transition-delay: 0s;
+}
+.cards-container .card:hover .contentBx .card-content{
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+.cards-container .card .contentBx .card-content h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.cards-container .card .contentBx .card-content p{
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-top: 1em;
+}
+.fade-in{
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+
+/*
+*
+*   section 3: mechanics
+*
+*/
+
+.mechanics{
+    background-color:#fff;
+    width: 100%;
+}
+.mechanics-container{
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+    padding-bottom: 3em;
+}
+.mechanic-card{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 40%;
+    min-width: 21em;
+    overflow: hidden;
+    border-radius: .5em;
+    text-decoration: none;
+    margin: 1em;
+    padding: 1em 2.5em;
+    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+    transition: transform .45s ease, background .45s ease;
+}
+.mechanic-card img{
+    width: 40%;
+    max-width: 30em;
+    margin-left: 30%;
+    transition: 250ms;
+}
+.mechanic-card h1{
+    color: #2E3C40;
+    padding-bottom: .5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 0.1em solid #ff263a;
+    transition: color .45s ease, border .45s ease;
+}
+.mechanic-card p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 700;
+}
+.mechanic-card:hover{
+    background: #ededed;
+    transform: scale(1.02);
+}
+.mechanic-card:hover h1{
+    color: #ff263a;
+}
+.mechanic-card:hover img{
+    width: 50%;
+    margin-left: 25%;
+}
+.mechanic-card li{
+    list-style: none;
+    margin-bottom: 1em;
+}
+.mechanic-card:hover li::before{
+    content: '\01F525';
+    margin-left: -1em;
+    margin-right: .6em;
+}
+
+/*
+*
+*   section 4: roadmap
+*
+*/
+
+
+.section-title{
+    margin-top: 2em;
+    margin-left: 10%;
+    color: #2E3C40;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 2em;
+}
+.roadmap-container{
+    min-height: 100%;
+    width: 100%;
+    padding-bottom: 7em;
+}
+.roadmap{
+    display: block;
+    overflow: auto;
+    width: 80%;
+    margin: 10%;
+    margin: 0 auto;
+    position: relative;
+}
+.roadmap-ul{
+    list-style: none;
+    width: 100%;
+}
+.roadmap-ul>li{
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 0.7em;
+    margin-bottom: 1em;
+}
+.roadmap-ul>li:last-child{
+    margin-bottom: 0;
+}
+.roadmap-content h1{
+    font-weight: 300;
+    margin-bottom: 0.5em;
+}
+.roadmap-content ul{
+    list-style: none;
+}
+.roadmap-content ul li::before{
+    content: '';
+    position: absolute;
+    margin-top: 0.4em;
+    left: 2em;
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 50%;
+    background-color: #2E3C40;
+    transition: 150ms;
+}
+.roadmap-content ul li{
+    margin-top: 0.5em;
+    padding-left: 2.8em;
+}
+.roadmap-content .progress{
+    font-size: 1.6vh;
+    font-weight: 300;
+    margin-bottom: 0.8em;
+    transition: 400ms;
+}
+.roadmap-content .inprogress{
+    color: #c27e00;
+}
+.roadmap-content .scheduled{
+    color: #2E3C40;
+}
+.roadmap-ul>li:hover .progress{
+    font-size: 2.5vh;
+}
+.roadmap-ul>li:hover .done::before
+{
+    background-color: #00661b;
+    height: 0.9em;
+    width: 0.9em;
+}
+.roadmap-ul>li:hover .doing::before
+{
+    background-color: #c27e00;
+    height: 0.9em;
+    width: 0.9em;
+}
+@media only screen and (orientation: landscape){
+    .roadmap-ul{
+        height: auto;
+        padding-top: 3em;
+        padding-bottom: 20em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .roadmap::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        width: 2px;
+        background-color: #2E3C40;
+    }
+    .roadmap-ul>li{
+        width: 45%;
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+        position: relative;
+    }
+    .roadmap-ul>li:nth-child(odd){
+        float: left;
+        clear: right;
+        border-radius: 0.8em 0em  0.8em  0.8em;
+    }
+    .roadmap-ul>li:nth-child(even){
+        float: right;
+        clear: left;
+        border-radius: 0px 0.8em 0.8em 0.8em;
+    }
+    .roadmap-ul>li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: #2E3C40;
+        border-radius: 50%;
+        top: 0;
+        transition: 200ms;
+    }
+    .launch::before{
+        content: 'Phase \A 1';
+        white-space: pre;
+        font-weight: 900;
+        top: 5%;
+        right: -4em;
+        font-size: 10vh;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        transform: rotate(90deg);
+        color: rgba(200, 200, 200, 0.3);
+    }
+    .growth::before{
+        content: 'Phase \A 2';
+        white-space: pre;
+        font-weight: 900;
+        top: 5%;
+        left: -4em;
+        font-size: 10vh;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        transform: rotate(-90deg);
+        color: rgba(200, 200, 200, 0.3);
+    }
+    .expansion::before{
+        content: 'Phase \A 3';
+        white-space: pre;
+        font-weight: 900;
+        top: 5%;
+        right: -4em;
+        font-size: 10vh;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        transform: rotate(90deg);
+        color: rgba(200, 200, 200, 0.3);
+    }
+    .utility::before{
+        content: 'Phase \A 4';
+        white-space: pre;
+        font-weight: 900;
+        top: 5%;
+        left: -4em;
+        font-size: 10vh;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute;
+        transform: rotate(-90deg);
+        color: rgba(200, 200, 200, 0.3);
+    }
+    .roadmap-ul>li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -11.1%; 
+    }
+    .roadmap-ul>li:nth-child(even)::after{
+        transform: translate(-50%, -50%);
+        left: -11.1%; 
+    }
+    .roadmap-ul>li:hover::after{
+        height: 25px;
+        width: 25px;
+    }
+    .roadmap-container:hover .launch::after{
+        /*background-color: #00661b;*/
+        background-color: #c27e00;
+    }
+    .roadmap-container:hover .growth::after{
+        background-color: #c27e00;
+    }
+    .roadmap-container:hover .expansion::after{
+        background-color: #2E3C40;
+    }
+    .roadmap-container:hover .utility::after{
+        background-color: #2E3C40;
+    }
+    .roadmap-content .progress{
+        position: absolute;
+        top: -2em;
+    }
+}
+
